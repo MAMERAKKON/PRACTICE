@@ -20,8 +20,8 @@ def buy_ticket(dpt, arv, train_time, seat_num, train_no):
 
     # 输入账号密码
     # 定位文本框
-    driver.find_element(By.ID, 'J-userName').send_keys('17621500573')
-    driver.find_element(By.ID, 'J-password').send_keys('ShanmuShbai0605')
+    driver.find_element(By.ID, 'J-userName').send_keys('input('请输入账号：')')
+    driver.find_element(By.ID, 'J-password').send_keys(input('请输入密码：'))
     driver.find_element(By.ID, 'J-login').click()
     time.sleep(0.5)
     driver.find_element(By.ID, 'id_card').send_keys('6511')
