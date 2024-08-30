@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <h1>这是一个点赞系统</h1>
+    <table border = '1'>
+        <tr>
+            <td>ID</td>
+            <td>角色名</td>
+            <td>点赞数</td>
+            <td>操作</td>
+        </tr>
+        {% for i in data%}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.count}}</td>
+            <td><a href="/like?id={{i.id}}">点赞</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

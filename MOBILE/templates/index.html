@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+</head>
+<body>
+    <h1>手机号码归属地查询+占卜</h1>
+    <form action = "/search" method = "get">
+        手机号：<input type = 'text' name = 'number' id = ''>
+        <input type = 'submit' value = '查询'>
+    </form>
+    {% if data%}
+    <h3>手机号码归属地</h3>
+    <table border="1">
+        <tr>
+            <td>手机号</td>
+            <td>{{ data['手机号'] }}</td>
+        </tr>
+        <tr>
+            <td>手机号码归属地</td>
+            <td>{{ data['手机号码归属地'] }}</td>
+        </tr>
+        <tr>
+            <td>手机区号</td>
+            <td>{{ data['手机区号'] }}</td>
+        </tr>
+        <tr>
+            <td>归属地邮编</td>
+            <td>{{ data['归属地邮编'] }}</td>
+        </tr>
+    </table>
+    <h3>五行占卜</h3>
+    <table border = '1'>
+        <tr>
+            <td>五行数理</td>
+            <td>{{ data['五行数理'] }}</td>
+        </tr>
+        <tr>
+            <td>五行属性</td>
+            <td>{{ data['五行属性'] }}</td>
+        </tr>
+        <tr>
+            <td>五行阴阳</td>
+            <td>{{ data['五行阴阳'] }}</td>
+        </tr>
+        <tr>
+            <td>吉凶分析</td>
+            <td>{{ data['吉凶分析'] }}</td>
+        </tr>
+        <tr>
+            <td>主人个性</td>
+            <td>{{ data['主人个性'] }}</td>
+        </tr>
+    </table>
+    <h3>周易占卜</h3>
+    <table border = '1'>
+        <tr>
+            <td>周易得分</td>
+            <td>{{ data['周易得分'] }}</td>
+        </tr>
+        <tr>
+            <td>周易吉凶</td>
+            <td>{{ data['周易吉凶'] }}</td>
+        </tr>
+        <tr>
+            <td>周易运势</td>
+            <td>{{ data['周易运势'] }}</td>
+        </tr>
+        <tr>
+            <td>周易详情</td>
+            <td>{{ data['周易详情'] }}</td>
+        </tr>
+    </table>
+    {% endif %}
+
+</body>
+</html>
